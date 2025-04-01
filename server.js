@@ -18,9 +18,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// Updated CORS configuration
+// CORS configuration
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://movie-streaming-app-frontend.vercel.app'],
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
